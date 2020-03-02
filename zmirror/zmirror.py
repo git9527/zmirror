@@ -764,14 +764,7 @@ convert_to_mirror_url = encode_mirror_url
 
 def is_target_domain_use_https(domain):
     """请求目标域名时是否使用https"""
-    if force_https_domains == 'NONE':
-        return False
-    if force_https_domains == 'ALL':
-        return True
-    if domain in force_https_domains:
-        return True
-    else:
-        return False
+    return True
 
 
 def add_ssrf_allowed_domain(domain):
